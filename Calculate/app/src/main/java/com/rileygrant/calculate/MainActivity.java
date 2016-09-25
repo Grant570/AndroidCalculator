@@ -26,12 +26,15 @@ public class MainActivity extends Activity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,nums);
         gv.setAdapter(adapter);
+        //String[] test = {"test"};
+        //gv.setAdapter(new TextViewAdapter(this,test));
 
        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            @Override
            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                Toast.makeText(getApplicationContext(),
                        ((TextView)view).getText(), Toast.LENGTH_SHORT).show();
+
            }
        });
     }

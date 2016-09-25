@@ -1,0 +1,4 @@
+http://android--code.blogspot.com/2015/08/android-gridview-add-item.html
+https://developer.android.com/guide/topics/ui/layout/gridview.html 
+http://www.mkyong.com/android/android-gridview-example/ 
+http://stackoverflow.com/questions/22429829/how-to-add-a-textview-to-a-gridview-in-android
