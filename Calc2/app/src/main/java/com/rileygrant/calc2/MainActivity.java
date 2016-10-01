@@ -153,12 +153,18 @@ public class MainActivity extends AppCompatActivity {
     //evaluate the input
     private String[] Evaluate(String str) {
         //Stack<String> ops = new Stack<>();
-        Stack<Float> numStack = new Stack<>();
-        String[] nums = str.split("\\+|-|\\*|/|–|\\(|\\)");
-        for (int i = 0; i< nums.length; i++){
-            numStack.push(Float.parseFloat(nums[i]));
+//        Stack<Float> numStack = new Stack<>();
+//        String[] parentheses = str.split("(\\(.*\\))^");
+//        String[] nums = str.split("\\+|-|\\*|/|–|\\(|\\)");
+////        for (int i = 0; i< nums.length; i++){
+////            numStack.push(Float.parseFloat(nums[i]));
+////        }
+
+        for(char c: str.toCharArray()){
+
         }
-        return nums;
+//        return parentheses;
+        return  null;
         }
     }
 
