@@ -20,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
             "7","8","9","/",
             "4","5","6","-",
             "1","2","3","+",
-            "0",".","(-)","="
+            "0",".","(–)","="
     };
     private final static String[] contentsLand = new String[]{
             "AC","(",")","*", "/","-",
             "0","1","2","3","4","+",
             "5","6","7","8","9"
-            ,".","(-)","="
+            ,".","(–)","="
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,19 +89,19 @@ public class MainActivity extends AppCompatActivity {
             return existing+ btnContent;
         }
         //if negative
-        else if(btnContent.equals("(-)")){
+        else if(btnContent.equals("(–)")){
             if(existing.length() == 0 ){
-                return  "(-1)*";
+                return  "–";
             }
             else if((existing.length()> 0 && existing.substring(existing.length()-1).matches("\\+|-|\\*|/|\\)|\\("))){
                 if(existing.substring(existing.length()-1).matches("\\d")){
-                    return existing + "*(-1)*";
+                    return existing + "–";
                 }
                 else if(existing.substring(existing.length()-1).equals("(")){
-                    return existing + "(-1)*";
+                    return existing + "–";
                 }
                 else{
-                    return existing + "(-1)*";
+                    return existing + "–";
                 }
             }
         }
@@ -152,11 +152,9 @@ public class MainActivity extends AppCompatActivity {
     }
     //evaluate the input
     private String[] Evaluate(String str) {
-        str = str.replace("(-)","(-1)*");
-        str = str.replace('X','*');
         //Stack<String> ops = new Stack<>();
         Stack<Float> numStack = new Stack<>();
-        String[] nums = str.split("\\+|-|\\*|/|\\(-1\\)\\*|\\(|\\)");
+        String[] nums = str.split("\\+|-|\\*|/|–|\\(|\\)");
         for (int i = 0; i< nums.length; i++){
             numStack.push(Float.parseFloat(nums[i]));
         }
